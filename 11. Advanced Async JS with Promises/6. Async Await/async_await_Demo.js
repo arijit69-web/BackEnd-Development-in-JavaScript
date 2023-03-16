@@ -5,7 +5,7 @@ function download(url) {
             console.log("Downloading completed");
             const content = "ABCDEF"; // assume dummy download content
             resolve(content);
-        }, 1000);
+        }, 10000);
     });
 }
 
@@ -36,7 +36,7 @@ async function steps() {
     const downloadedData = await download("www.xyz.com");
     console.log("data downloaded is", downloadedData);
     const fileWritten = await writeFile(downloadedData);
-    console.log("fiele written is", fileWritten);
+    console.log("file written is", fileWritten);
     const uploadResponse = await uploadData(fileWritten, "www.drive.google.com");
     console.log("Upload response is", uploadResponse);
     return uploadResponse;
@@ -61,7 +61,7 @@ async function steps() {
     const downloadedData = await download("www.xyz.com");
     console.log("data downloaded is", downloadedData);
     const fileWritten = await writeFile(downloadedData);
-    console.log("fiele written is", fileWritten);
+    console.log("file written is", fileWritten);
     const uploadResponse = await uploadData(fileWritten, "www.drive.google.com");
     console.log("Upload response is", uploadResponse);
     return uploadResponse;
