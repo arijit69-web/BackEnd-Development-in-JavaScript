@@ -17,3 +17,4 @@ Example 2: Creating a new README.md file.
 
 <img src="Screenshot3.png"  width="800" height="50">
 
+- The moment u do git push, u might have seen a compression log eg.
