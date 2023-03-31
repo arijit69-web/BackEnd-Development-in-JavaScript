@@ -15,6 +15,6 @@ Example 2: Creating a new README.md file.
 - So the hash is actually storing a BLOB, inside which u have the same content and u can visualise that content like this :
 `git cat-file -p <Hash_Value>` : The command provides the content or the type of an object in the repository. The type is required unless -t or -p is used to find the object type, or -s is used to find the object size, or --textconv or --filters is used (which imply type "blob").
 
-<img src="Screenshot3.png"  width="800" height="50">
+<img src="Screenshot3.png"  width="700" height="40">
 
-- The moment u do git push, u might have seen a compression log eg.
+- For the exact same piece of identical data u are going to get the same hash value. If u are going to get the same hash in 2 files then why do u need to store 2 different objects out of it.
