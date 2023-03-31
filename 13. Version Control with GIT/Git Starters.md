@@ -16,7 +16,8 @@
 - **Repository Area** -> This area actually contains the details of all you previous registered version.
   And the files in this area, git already manages them and knows their version history.
 
-![image](./Working%20Area%20-%20Staging%20Area%20-%20Repository.PNG)
+<img src="Working%20Area%20-%20Staging%20Area%20-%20Repository.PNG"  width="500" height="300">
+
 
 3. `git add <file>` -> moves the untracked file from the working area to the staging area.
 
@@ -70,3 +71,7 @@ Note: The name of the remote connection is always used to establish communicatio
 18. Merge conflicts are a very common scenario. Merge conflicts can occur if multiple people try to make changes to the same file, and then collaborate.
 
 19. `git push origin master` -> It will push changes from the local master branch to the remote (Git) master branch.
+
+20. `tree <Folder_Name>` -> Tree is a recursive directory listing command or program that produces a depth-indented listing of files.
+
+21. `git cat-file -p <Hash_Value>` -> The command provides the content or the type of an object in the repository. The type is required unless -t or -p is used to find the object type, or -s is used to find the object size, or --textconv or --filters is used (which imply type "blob").
