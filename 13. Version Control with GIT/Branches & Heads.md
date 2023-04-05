@@ -88,3 +88,5 @@ Tag is also a pointer. Tag can point to a particular commit. You can store some 
 - `git show <TagVersion>` -> You will be able to see what is the tag pointing to. Which commit the tag is pointing to.
 
 - `git show-ref --tags` -> It will list all of the tags.
+
+- `git push --tags origin master` -> It will push tags from the local master branch to the remote (Git) master branch. By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to GitHub after you have created them. 
