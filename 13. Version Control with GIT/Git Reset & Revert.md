@@ -30,7 +30,7 @@ Visit these links to learn more about --mixed reset and --hard reset:
 
 - ### [Resetting V/S Checking Out V/S Reverting in GIT](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
-<img src="Reset1.png"  width="400" height="300">
+<img src="Reset1.png"  width="300" height="250">
 
 
 ## Reflog
