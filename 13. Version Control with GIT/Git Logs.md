@@ -21,5 +21,6 @@ eg3. git log --since="10.minute" : How many commits we have made 10 minutes ago.
 ## Tilda (~n) and Caret (^n) Explanation
 
 <video src="Tilda_Caret_Explanantion.mp4" controls="controls" style="max-width: 530px;"></video>
+[VIDEO]
 
 - `git merge <Other Branch Name>` ->  The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
