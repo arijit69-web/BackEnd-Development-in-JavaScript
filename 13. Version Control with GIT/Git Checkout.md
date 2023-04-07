@@ -20,6 +20,8 @@ There are scenarios where you might need to checkout or clone from a specific gi
 
 - `git checkout <Commit ID>` -> You need to be very careful with this checkout. It will be in the detached HEAD mode. Meaning, you can play around with making the changes without impacting any branches. So if you need to make any actual changes to a specific commit, use a branch checkout as explained in the next step.
 
+***The checkout will just move your head pointer***
+
 The branch pointer is pointing to some other commit. And the head is also not pointing to the last commit and u make changes to ur head and ur head comes to a detached state, then u will lose access to those sets of commits that are not even pointed by the branch pointer.
 
 Due to the detached head state u can get some dangling commits. A dangling commit is a commit which is not associated with reference, i.e., there is no way to reach it. The commits which are no more referenced by any branch pointer or the head pointer are garbage collected.
