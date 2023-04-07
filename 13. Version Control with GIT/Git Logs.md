@@ -14,7 +14,7 @@ eg3. git log --since="10.minute" : How many commits we have made 10 minutes ago.
 
 - `git log <Commit ID>~<N>` -> It will give u the Nth node in your same ancestry chain. eg. ~2 means up two levels in the hierarchy, via the first parent if a commit has more than one parent
 
-<img src="Screenshot6.png"  width="500" height="300">
+<img src="Screenshot6.PNG"  width="500" height="300">
 
 <img src="Screenshot7.png"  width="500" height="300">
 
