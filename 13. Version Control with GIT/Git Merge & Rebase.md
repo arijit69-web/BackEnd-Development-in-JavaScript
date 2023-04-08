@@ -23,7 +23,7 @@ Visit these links to learn more about rebase squash, rebase pick & Git Rebase St
 - [Git Rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
 
 
-## `Squash and merge` & `Rebase and merge` can be done on GitHub too.
+## `Squash and merge` & `Rebase and merge` can be done explicitly on GitHub too.
 
 <br />
 
