@@ -18,9 +18,30 @@ Rebasing is the process of moving or combining a sequence of commits to a new ba
 - `git rebase <base>` -> Git rebase in standard mode will automatically take the commits in your current working branch and apply them to the head of the passed branch.
 This automatically rebases the current branch onto ＜base＞, which can be any kind of commit reference (for example an ID, a branch name, a tag, or a relative reference to HEAD).
 
-Visit these links to learn more about rebase & Git Rebase Standard V/S Git Rebase Interactive :
+Visit these links to learn more about rebase squash, rebase pick & Git Rebase Standard V/S Git Rebase Interactive :
 
 - [Git Rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
 
 
+## `Squash and merge` & `Rebase and merge` can be done on GitHub too.
+
+<br />
+
+<img src="Rebase1.png"  width="700" height="200">
+
+<br />
+
+<img src="Rebase2.png"  width="490" height="300">
+
+<br />
+
+<img src="Rebase3.png"  width="500" height="300">
+
+<br />
+
+<img src="Rebase4.png"  width="500" height="200">
+
+<br />
+
+*In general, `rebasing with squashing` is recommended. When your changes are merged, most open source repositories or companies prefer `git rebase` over `git merge`.*
 
