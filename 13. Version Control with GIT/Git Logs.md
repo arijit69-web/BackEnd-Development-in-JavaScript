@@ -22,6 +22,6 @@ eg3. git log --since="10.minute" : How many commits we have made 10 minutes ago.
 
 <video src="Tilda_Caret_Explanantion.mp4" controls="controls" style="max-width: 530px;"></video>
 
-[VIDEO](https://github.com/arijit69-web/BackEnd-Development-in-NodeJS/blob/master/13.%20Version%20Control%20with%20GIT/Tilda_Caret_Explanantion.mp4)
+[VIDEO EXPLANATION](https://github.com/arijit69-web/BackEnd-Development-in-NodeJS/blob/master/13.%20Version%20Control%20with%20GIT/Screenshots/Tilda_Caret_Explanantion.mp4)
 
 - `git merge <Other Branch Name>` ->  The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
