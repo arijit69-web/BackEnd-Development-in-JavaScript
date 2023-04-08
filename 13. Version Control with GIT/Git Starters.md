@@ -16,7 +16,7 @@
 - **Repository Area** -> This area actually contains the details of all you previous registered version.
   And the files in this area, git already manages them and knows their version history.
 
-<img src="Working%20Area%20-%20Staging%20Area%20-%20Repository.PNG"  width="500" height="300">
+<img src="./Screenshots/Working%20Area%20-%20Staging%20Area%20-%20Repository.PNG"  width="500" height="300">
 
 
 3. `git add <file>` -> moves the untracked file from the working area to the staging area.

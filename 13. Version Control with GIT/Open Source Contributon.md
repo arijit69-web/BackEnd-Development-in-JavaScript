@@ -26,7 +26,7 @@ For example, If you wanted to contribute to an open-source project, this is what
 - You push your changes to a branch in the forked repository.
 - Then you would raise a PR to the actual project repository from your forked repository.
 
-<img src="Screenshot5.webp"  width="700" height="400">
+<img src="./Screenshots/Screenshot5.webp"  width="700" height="400">
 
 
 

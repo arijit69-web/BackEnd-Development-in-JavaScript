@@ -8,7 +8,7 @@
 > Mixed,
 > Hard
 
-<img src="Reset.png"  width="380" height="640">
+<img src="./Screenshots/Reset.png"  width="380" height="640">
 
 - `git reset --soft <Commit ID>` -> It is just going to move the HEAD pointer and the BRANCH pointer to the particular Commit ID.
 
@@ -30,7 +30,7 @@ Visit these links to learn more about --mixed reset and --hard reset:
 
 - ### [Resetting V/S Checking Out V/S Reverting in GIT](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
-<img src="Reset1.png"  width="300" height="250">
+<img src="./Screenshots/Reset1.png"  width="300" height="250">
 
 
 ## Reflog

@@ -48,12 +48,12 @@ In `git reflog` u also store the amend. So nothing in git is actually lost. Some
 
 Branches are pointer to a commit.
 
-<img src="Branch&Head.png"  width="450" height="600">
+<img src="./Screenshots/Branch&Head.png"  width="450" height="600">
 
 - `git checkout -b "<BranchName>"` -> Using this command u r creating a branch. When u use this command it just creates a new pointer to a particular commit u are at. Whenever u start making another commit it just shifts that pointer to the new child commit that u r creating. So u can move that poniter here and there. So u can able to move the branch from here and there.
 
 
-<img src="Screenshot4.png"  width="500" height="300">
+<img src="./Screenshots/Screenshot4.png"  width="500" height="300">
 
 
 ### HEAD

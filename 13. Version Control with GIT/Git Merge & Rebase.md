@@ -1,6 +1,6 @@
 ## Git Merge
 
-<img src="Merge.png"  width="650" height="600">
+<img src="./Screenshots/Merge.png"  width="650" height="600">
 
 - `git merge <branch>` -> Merging two branches. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch. Now resolve the merge conflicts if there are any merge conflicts in the files.
 
@@ -27,19 +27,19 @@ Visit these links to learn more about rebase squash, rebase pick & Git Rebase St
 
 <br />
 
-<img src="Rebase1.png"  width="700" height="200">
+<img src="./Screenshots/Rebase1.png"  width="700" height="200">
 
 <br />
 
-<img src="Rebase2.png"  width="490" height="300">
+<img src="./Screenshots/Rebase2.png"  width="490" height="300">
 
 <br />
 
-<img src="Rebase3.png"  width="500" height="300">
+<img src="./Screenshots/Rebase3.png"  width="500" height="300">
 
 <br />
 
-<img src="Rebase4.png"  width="500" height="200">
+<img src="./Screenshots/Rebase4.png"  width="500" height="200">
 
 <br />
 
