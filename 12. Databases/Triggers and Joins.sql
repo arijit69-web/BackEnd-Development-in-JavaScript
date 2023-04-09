@@ -8184,3 +8184,7 @@ insert  into products values ('S10_19490','1952 Alpine Renault 2100','Classic Ca
 While inserting, the MSRP that we are setting is 214.30 but it has been already updated to 1000 because before insert on any product we are setting the MSRP to be equal to 1000.
 */
 select * from Products where productCode = 'S10_19490';
+
+show triggers;
+
+show procedure status where db='classicmodels';
