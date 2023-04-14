@@ -14,7 +14,7 @@ Whatever is there in your staging area it is going to create a stash out of it.
 
 - `git stash show` -> To track all the stashes and their changes. To see the changes in the file before stash and after stash operation.
 
-- `git stash show stash@{<id>}` -> To track the specific stash and its changes using their <id>. To see the changes in the file before and after the stash operation in a particular stash.
+- `git stash show stash@{<id>}` -> To track the specific stash and its changes using their `<id>`. To see the changes in the file before and after the stash operation in a particular stash.
 
 - `git stash apply stash@{<id}` -> Now ur last stash will not going to be applied. Whatever version or id of stash that u have actually mentioned that particular stash will be applied.
 
@@ -28,7 +28,7 @@ The git stash pop command is quite similar to git stash apply. The main differen
 
 - `git stash drop` -> The git stash drop command is used to delete a stash from the stack. Generally, it deletes the most recent stash. Caution should be taken before using stash drop command, as it is difficult to undo if once applied.The only way to revert it is if you do not close the terminal after deleting the stash. It will not going to apply any changes like `git stash pop`, but it will going to remove the stash.
 
-- `git stash drop stash@{<id>}` -> It will be going to drop that particular stash with that <id> and not apply any changes.
+- `git stash drop stash@{<id>}` -> It will be going to drop that particular stash with that `<id>` and not apply any changes.
 
 - `git stash clear` -> The git stash clear command allows deleting all the available stashes at once. To delete all the available stashes.
 

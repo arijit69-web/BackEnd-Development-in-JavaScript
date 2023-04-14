@@ -8,7 +8,7 @@ eg2. git log --since="1 minute ago" : How many commits we have made 1 minute ago
 
 eg3. git log --since="10.minute" : How many commits we have made 10 minutes ago.
 
-- `git log --grep=<Commit Message>` -> You are only going to get the commit which is having <Commit Message> as a substring in the message.
+- `git log --grep=<Commit Message>` -> You are only going to get the commit which is having `<Commit Message>` as a substring in the message.
 
 - `git log <Commit ID>^<N>` -> If u want to switch to any particular parent of another merged branch. It will give u the immediate Nth parent. eg. ^2 means the second parent where a commit has more than one parent (i.e. because it's a merge).
 

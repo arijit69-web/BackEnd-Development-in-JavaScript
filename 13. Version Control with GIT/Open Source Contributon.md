@@ -36,5 +36,5 @@ For example, If you wanted to contribute to an open-source project, this is what
 - `git pull <RemoteName>` -> Once you have the upstream of the main project repo with u. You can do `git pull <RemoteName>`. This is going to actually pull the latest content from the main project repo. You asked to pull from the remote 'upstream', but did not specify a branch. This is why everything got downloaded.
 
 
-- `git pull <RemoteName> <BranchName>` -> This will only download the latest content from the <BranchName> branch of the main project repo.
+- `git pull <RemoteName> <BranchName>` -> This will only download the latest content from the `<BranchName>` branch of the main project repo.
 
