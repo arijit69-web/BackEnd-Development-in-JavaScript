@@ -148,9 +148,7 @@ Address: 2404:6800:4009:82e::200e
 [Scaling hotstar.com for 25 million concurrent viewers](https://www.youtube.com/watch?v=QjvyiyH4rr0)
 
 
-- Based on the use case, the server architecture can be designed and implemented.
-
-- The server architecture can be designed and implemented using `Microservices Architecture`, `Monolithic Architecture`, etc.
+- The server architecture can be designed and implemented using `Microservices Architecture`, `Monolithic Architecture`.
 
 - All codebase in a single repository is an example of Monolithic Architecture.
 
