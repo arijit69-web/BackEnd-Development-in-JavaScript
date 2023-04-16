@@ -19,4 +19,4 @@ Example 2: Creating a new README.md file.
 
 - For the exact same piece of identical data u are going to get the same hash value. If u are going to get the same hash in 2 files then why do u need to store 2 different objects out of it.
 
-**The rest of the things are in COPY**
+**The rest of the things are in COPY.**
