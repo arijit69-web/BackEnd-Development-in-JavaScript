@@ -10,7 +10,8 @@ export function insertionsort(arr) {
   }
 }
 
-// Default Export
+/* Default Export */
+
 export default function bubblesort(arr) {
   let n = arr.length;
   // this function applied adjacent comparisons and immediate swaps with adjacent element
