@@ -71,3 +71,36 @@ If we keep the type as `module`  inside the `package.json` file then the whole f
   "type": "commonjs"
 }
 ```
+
+</br>
+</br>
+
+## Top-level await
+
+You can use the await keyword on its own (outside of an async function) at the top level of a module. This means that modules with child modules that use await will wait for the child modules to execute before they themselves run, all while not blocking other child modules from loading. Top-level await enables developers to use the await keyword outside of async functions. It acts like a big async function causing other modules who import them to wait before they start evaluating their body.
+
+**The old behavior**
+
+When async/await was first introduced, attempting to use an await outside of an async function resulted in a SyntaxError. Many developers utilized immediately-invoked async function expressions as a way to get access to the feature.
+
+```
+await Promise.resolve(console.log('🎉'));
+// → SyntaxError: await is only valid in async function
+
+(async function() {
+  await Promise.resolve(console.log('🎉'));
+  // → 🎉
+}());
+```
+**The new behavior**
+
+With top-level await, the above code instead works the way you’d expect within modules:
+
+```
+await Promise.resolve(console.log('🎉'));
+// → 🎉
+```
+
+>> Note: Top-level await only works at the top level of modules. There is no support for classic scripts or non-async functions.
+
+>> Note: If you want to use **CommonJS module** syntax inside an **ES-6 module** package, set the file extension as `.cjs`.
