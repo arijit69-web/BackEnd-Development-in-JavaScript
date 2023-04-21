@@ -70,7 +70,7 @@ Visit these link to learn more about Git Cherry Pick :
 
 The git rerere functionality is a bit of a hidden feature. The name stands for “reuse recorded resolution” and, as the name implies, it allows you to ask Git to remember how you’ve resolved a hunk conflict so that the next time it sees the same conflict, Git can resolve it for you automatically.
 
-Visit these link to learn more about Git Rerere :
+Visit these link to learn more about Git Rerere:
 
 - [Git Rerere](https://git-scm.com/book/en/v2/Git-Tools-Rerere)
 

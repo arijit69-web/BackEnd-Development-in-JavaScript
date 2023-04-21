@@ -2,7 +2,7 @@
 
 - `stash` - Sometimes you want to switch the branches, but you are working on an incomplete part of your current project. You don't want to make a commit of half-done work. Git stashing allows you to do so. The git stash command enables you to switch branches without committing the current branch. Generally, the stash's meaning is "store something safely in a hidden place." The sense in Git is also the same for stash; Git temporarily saves your data safely without committing.
 
-**Stashes are not going to be created for untracked files. They will be only created for the changes that u do in a tracking file.How to track a file? Add that file in the staging area or there is a file already in the staging area which has some changes.**
+>>Stashes are not going to be created for untracked files. They will be only created for the changes that u do in a tracking file. How to track a file? Add that file in the staging area or there is a file already in the staging area which has some changes.
 
 - `git stash` -> To save it temporarily, we can use the git stash command. There is a piece of code u want to safely store somewhere but u don't want it to be part of the next commit. You are just going to add that particular file `git add config.js` and do `git stash`.
 What it will do?
