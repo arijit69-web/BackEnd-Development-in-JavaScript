@@ -1,6 +1,6 @@
 {
   "name": "arijitdsa.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An NPM package that can help you to use all the Data Structures and Algorithms in your coding implementations ",
   "main": "index.js",
   "scripts": {
