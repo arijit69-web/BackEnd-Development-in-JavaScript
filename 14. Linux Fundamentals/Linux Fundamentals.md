@@ -85,7 +85,7 @@ current directory in which you are.
 
 - `command_1 | command_2 | command_3 | .... | command_N` -> Pipe is used to combine two or more commands, and in this, the output of one command acts as input to another command, and this command’s output may act as input to the next command and so on. It can also be visualized as a temporary connection between two or more commands/ programs/ processes. The command line programs that do the further processing are referred to as filters. 
 
-- `ls | grep <substring>` -> The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for global search for regular expression and print out). eg. ls | grep DSA
+- `ls | grep <substring> "<filename.extension>"` -> The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for global search for regular expression and print out). eg. ls | grep int "file.c".
 
 - `ps aux` -> The ps aux command is a tool to monitor processes running on your Linux system. A process is associated with any program running on your system, and is used to manage and monitor a program’s memory usage, processor time, and I/O resources. 
 
