@@ -1,4 +1,4 @@
-import searchingAlgo from "./searching.js";
+import searchingAlgo from "./searching.js"; // Here we have to mention the extension like `.js` while importing the package.
 import { insertionsort } from "./sorting.mjs"; // -> Named Export
 
 console.log(searchingAlgo.linearSearch([3, 2, 1, 5, 4, 23, 6], 23));

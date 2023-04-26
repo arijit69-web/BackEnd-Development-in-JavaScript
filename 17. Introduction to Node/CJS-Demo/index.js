@@ -8,7 +8,7 @@ modules but also community-based and local modules.
 */
 
 /* Syntax 1 */
-const searchFuncations = require("./searching");
+const searchFuncations = require("./searching"); // Here we don't have to mention the extension like `.js` while importing the package.
 console.log(searchFuncations.linearSearch([3, 2, 1, 5, 4, 23, 6], 23));
 
 /* Syntax 2 */
