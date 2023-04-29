@@ -45,7 +45,7 @@ From the `Object.prototype` u have a property that can help u to refer back to t
 
 - If you have not manually returned any object from the `Product()` function, JS will assume that you want to return `this` and the `Product() Object` will get returned and stored inside the variable `iPhone`.
 
-- The `Product() Object` does not have a `.constructor` but this `Product() Object` is linked to another object i.e. `Product.prototype` which has a `.constructor` property that is referAring back to the `Product() function`.
+- The `Product() Object` does not have a `.constructor` but this `Product() Object` is linked to another object i.e. `Product.prototype` which has a `.constructor` property that is referring back to the `Product() function`.
 </br>
 </br>
 
