@@ -33,7 +33,7 @@ From the `Object.prototype` u have a property that can help u to refer back to t
 - This `Brand new Empty Object` is actually linked with `Product.prototype`.
 </br>
 
-<img src="./Screenshots/ss5.PNG"  width="400" height="300">
+<img src="./Screenshots/ss5.png"  width="400" height="300">
 
 - You assign a `this` keyword that actually refers to the call site i.e. `Brand new Empty Object`.
 
@@ -41,7 +41,7 @@ From the `Object.prototype` u have a property that can help u to refer back to t
 
 - Assign a name & a price property on the `Brand new Empty Object`.
 
-<img src="./Screenshots/ss6.PNG"  width="400" height="300">
+<img src="./Screenshots/ss6.png"  width="400" height="300">
 
 - If you have not manually returned any object from the `Product()` function, JS will assume that you want to return `this` and the `Product() Object` will get returned and stored inside the variable `iPhone`.
 
