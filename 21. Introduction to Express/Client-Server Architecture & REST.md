@@ -56,4 +56,84 @@ The Top API Architecture Styles of 2023:
 A set of guidelines that drive the architecture of the web. Representational State Transfer (REST) is a software architecture style for building scalable web services. REST services typically communicate via HTTP and are built using XML and JSON. 
 >APIs that follow REST guidelines/recommendation are called REST APIs.
 
-# gRPC
+## Guidelines of REST to prepare good APIs:
+- REST prefers a Client-Server communication should happen over HTTP.
+- REST prefers JSON as the format to send and receive the data.
+[JSON - JavaScript Object Notation is a standard text-based format for representing structured data based on JavaScript object syntax. Create a JSON file by putting the extension as .json.]
+- REST gives guidelines on how the URL should look like.
+    - In REST the main source of information is considered as a resource, eg. of resources: users, likes, comments, etc.
+    - The endpoints/URL should use resources and not actions, eg. of actions: createPost, deletePost, addUser, etc. The REST conventions never mention actions in the URL/endpoints.
+    - The resources we mentioned above are expected to be plural.
+    - Eg. of REST URL -> [www.medium.com/blogs],[www.medium.com/blogs/2].
+    - Every REST endpoint should be defined along with HTTP methods. eg. of HTTP methods: POST, GET, PUT, PATCH, & DELETE
+        - GET -> The HTTP GET method is used to read (or retrieve) a representation of a resource.
+            
+            Examples:
+
+            - /blogs (GET) -> read (or retrieve) data of all the blogs.
+            - /blogs/12 (GET) -> read (or retrieve) data of the blog whose unique identifier value is 12.
+            - /blogs/:id (GET) -> read (or retrieve) data of the blog having a unique identifier as `id`.
+            - /blogs/:id/comments (GET) -> read (or retrieve) all the comments of the blog having a unique identifier as `id`.
+            - /blogs/:id1/comments/:id2 (GET) -> read (or retrieve) the comment having a unique identifier as `id2` of the blog having a unique identifier as `id1`. *Don't use more than 3 levels of nesting, eg. `/a/:id/b/:id/c/:id`.*
+
+        - POST -> The POST method is most often utilized to create new resources.
+
+            Examples:
+                  
+            - /blogs (POST) -> create a blog. The information/details regarding the blog are sent inside the `req.body`. That `req.body` can take data in the form of JSON or in the form of simple text. You don't send the information/details regarding the blog in the URL and that is one of the most significant features of POST. As if you want to send any sensitive information, u send that in the request body so that no one can see/tamper with it. And if u don't send anything in the URL it can never be saved in the history.
+            
+        - PATCH -> PATCH is used to partially modify resources.
+
+            Examples:
+
+            - /blogs/:id (PATCH) -> modify/update the blog having a unique identifier as `id`. The information/details regarding the blog update are sent inside the `req.body`.
+
+        - DELETE -> It is used to delete a resource identified by filters or ID.
+
+            Examples:
+
+            - /blogs (DELETE) -> delete all the blogs.
+            - /blogs/12 (DELETE) -> delete the blog whose unique identifier value is 12.
+            - /blogs/:id (DELETE) -> delete the blog having a unique identifier as `id`.
+
+        - PUT -> PUT is used to modify/replace resources.
+            
+            Examples:
+
+            - /blogs/:id (PUT) -> modify/update the blog having a unique identifier as `id`. The information/details regarding the blog update are sent inside the `req.body`.
+
+- REST expects the response to have HTTP codes.
+
+## API Versioning
+
+API versioning is the practice of managing changes to an API and ensuring that these changes are made without disrupting clients.
+
+<video src="../../Videos/API-Versioning.mp4" controls="controls" style="max-width: 530px;"></video>
+
+[VIDEO EXPLANATION](../../Videos/API-Versioning.mp4)
+
+
+## Sending data can be done in 3 ways:
+
+- req.body
+
+The req.body property contains key-value pairs of data submitted in the request body. An object containing text parameters from the parsed request body, defaulting to {}. By default, the request body can be URL-encoded or stringified as JSON.
+
+- URL params
+
+URL parameters known also as "query strings" or "URL query parameters" are elements inserted in your URLs to help you filter and organize content or track information on your website.
+To identify a URL parameter, refer to the portion of the URL that comes after a question mark (?). URL parameters are made of a key and a value, separated by an equal sign (=). Multiple parameters are each then separated by an ampersand (&).
+
+<img src="./Screenshots/ss2.png"  width="700" height="250">
+
+- Query params
+
+URL parameter is basically used to identify a specific resource or resources whereas Query Parameter is used to sort/filter those resources.
+
+<img src="./Screenshots/ss3.png"  width="650" height="750">
+
+</br>
+
+## CRUD API
+
+**CRUD** stands for CREATE, READ, UPDATE, and DELETE. These functions are the four pillars of a complete CRUD API. APIs that provide all these functionalities together are called CRUD APIs.
