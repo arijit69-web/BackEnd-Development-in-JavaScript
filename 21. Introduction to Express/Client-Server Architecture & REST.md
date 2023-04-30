@@ -35,13 +35,8 @@ A software framework is a structure that you can use to build software. It acts 
 A framework is similar to a template in that you can modify it and add certain features and higher functionalities to create a complex and broad project that many people can use.
 Software frameworks provide a template in which almost all general tasks have been handled. This allows you to focus on the core software development rather than the details of the process. Frameworks are made up of several libraries clubbed together. eg. Ruby on Rails.
 
-# REST (REpresentational State Transfer)
-
-A set of guidelines that drive the architecture of the web. Representational State Transfer (REST) is a software architecture style for building scalable web services. REST services typically communicate via HTTP and are built using XML and JSON. 
->APIs that follow REST guidelines/recommendation are called REST APIs.
-
 ```
-According to Postman’s State of the API 2022 report, the most popular API architectural styles are:
+The Top API Architecture Styles of 2023:
 - REST 
 - Webhooks
 - SOAP 
@@ -55,5 +50,10 @@ According to Postman’s State of the API 2022 report, the most popular API arch
 - EDA 
 - Other 
 ```
+
+# REST (REpresentational State Transfer)
+
+A set of guidelines that drive the architecture of the web. Representational State Transfer (REST) is a software architecture style for building scalable web services. REST services typically communicate via HTTP and are built using XML and JSON. 
+>APIs that follow REST guidelines/recommendation are called REST APIs.
 
 # gRPC
