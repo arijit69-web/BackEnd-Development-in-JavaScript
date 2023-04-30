@@ -61,7 +61,7 @@ Product.prototype.display = function(){
 
 <img src="./Screenshots/ss7.PNG"  width="400" height="300">
 
-- During runtime JS will come to your iPhone object and will check 'Does your `iPhone object` have the `display()` property?' No, this iPhone object does not have this property. Now it will go one step above in the `Product.prototype` chain and see 'Does `Product.prototype` object has the `display()` property?' Yes, `Product.prototype` has a `display()` function and now it will call the `display()` function. You made changes to ur prototype and those changes are actually reflected in the `iPhone object`.
+- During runtime JS will come to your iPhone object and will check 'Does your `iPhone object` have the `display()` property?' No, this iPhone object does not have this property. Now it will go one step above in the `Product.prototype` chain and see 'Does `Product.prototype` object has the `display()` property?' Yes, `Product.prototype` has a `display()` function and now it will call the `display()` function. You made changes in the `Product.prototype` and those changes are actually reflected in the `iPhone object`.
 
 Example: 
 
