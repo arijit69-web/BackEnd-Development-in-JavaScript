@@ -134,6 +134,6 @@ URL parameter is basically used to identify a specific resource or resources whe
 
 </br>
 
-## CRUD API
+## CRUD APIs
 
 **CRUD** stands for CREATE, READ, UPDATE, and DELETE. These functions are the four pillars of a complete CRUD API. APIs that provide all these functionalities together are called CRUD APIs.
