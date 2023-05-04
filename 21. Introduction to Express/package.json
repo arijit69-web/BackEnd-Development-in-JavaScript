@@ -1,0 +1,14 @@
+{
+  "name": "21.-introduction-to-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "expressIndex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
