@@ -60,7 +60,7 @@ Middleware functions are functions that have access to the request object (req),
 </br>
 </br>
 
->In middleware, you can do Request Validation. Request validation is whether the incoming request follows the correct signature of the API contract or not. In the case that it isn't, you don't need to send it to the controller or to the backend; we will only revert the request from the middleware only.
+> In middleware, you can do Request Validation. Request validation is whether the incoming request follows the correct signature of the API contract or not. In the case that it isn't, you don't need to send it to the controller or to the backend; we will only revert the request from the middleware only.
 
 # Project Folder Structure
 
