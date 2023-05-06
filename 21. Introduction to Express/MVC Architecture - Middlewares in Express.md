@@ -72,8 +72,8 @@ Middleware functions are functions that have access to the request object (req),
 
     - `config` -> in this folder anything and everything regarding any configurations or setup of a library or module will be done. For example: setting up `dotenv` so that we can use the environment variables anywhere in a cleaner fashion, this is done in the `server-config.js`. One more example can be to setup you logging library that can help you to prepare meaningful logs, so configuration for this library should also be done here.
 
-    - `routes` -> in the routes folder, we register a route and the corresponding middleware and controllers to it.
-
+    - `routes` -> in the routes folder, we register a route and the corresponding middleware and controllers to it. Inside the routes folder, we can have different folders for different routes or for different API versions.
+ 
     - `middlewares` -> they are just going to intercept the incoming requests where we can write our validators, authenticators etc.
 
     - `controllers` -> they are kind of the last middlewares as post them you call you business layer to execute the budiness logic. In controllers we just receive the incoming requests and data and then pass it to the business layer, and once business layer returns an output, we structure the API response in controllers and send the output.
