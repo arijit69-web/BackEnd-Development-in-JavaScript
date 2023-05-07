@@ -34,7 +34,8 @@ $ npm install --save oracledb # Oracle Database
 In order to initialize sequelize, we need to run the command `npx sequelize init` in the directory where we want to initialize the models, and in the directory where we want to write the code.
 
 ```
-cd .\src\
-
-
+$ cd .\src\
+$ npx sequelize init
 ```
+
+>NPM is a package manager used to install, delete, and update Javascript packages on your machine. NPX is a package executer, and it is used to execute javascript packages directly, without installing them.
