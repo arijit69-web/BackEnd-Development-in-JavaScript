@@ -32,10 +32,39 @@ $ npm install --save oracledb # Oracle Database
 ```
 
 In order to initialize sequelize, we need to run the command `npx sequelize init` in the directory where we want to initialize the models, and in the directory where we want to write the code.
-
+Go inside the `src` folder and execute the command `npx sequelize init`.
 ```
 $ cd .\src\
 $ npx sequelize init
 ```
-
 >NPM is a package manager used to install, delete, and update Javascript packages on your machine. NPX is a package executer, and it is used to execute javascript packages directly, without installing them.
+
+- It created a config.json file inside the config folder
+
+- It created a model folder
+
+- It created a migration folder
+
+- It created a seeder folder
+
+</br>
+
+## config.json
+
+The Config.json file gives us configurations for three environments:
+
+- **Development**: This is where application/system development tasks, such as designing, programming, debugging, etc., take place.
+
+- **Test**: As the name implies, this is where application testing is conducted to find and fix errors.
+
+- **Production**: The last environment in software development, this is where new builds/updates are moved into production for end users. 
+
+- `dialect` -> What database are we using? eg. 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle'
+
+- `host` -> Get the URL of the server where u have actually hosted the MySQL server.
+
+- `database` -> Set the Database name that u want to set.
+
+**Include this config.json file in your .gitignore file.**
+
+

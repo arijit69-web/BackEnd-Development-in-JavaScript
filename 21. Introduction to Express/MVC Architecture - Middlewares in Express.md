@@ -90,9 +90,10 @@ Middleware functions are functions that have access to the request object (req),
 
     - `rest.http` -> this is a file which contains all the API endpoints and their request and response bodies, this file can be used to test the APIs using the REST client extension in VS Code.
 
-    - `seed` -> A seed file/folder will contain dummy data that populates your database so that you can test if your models and projects are working the way you want them to.
+    - `seeders` -> A seed file/folder will contain dummy data that populates your database so that you can test if your models and projects are working the way you want them to.
 
     - `migrations` -> Migrations are `Django's` way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema.
+    Migration files are used to do version control of your DBs.
 
 
 # EJS - The Templating Engine
