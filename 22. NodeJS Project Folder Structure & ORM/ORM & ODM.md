@@ -11,3 +11,30 @@ eg. of ORM is Sequelize
 ODM on the other hand is an Object Document Mapper, which maps objects with a Document Database like MongoDB. The main difference is that ORM is for MySQL databases, while ODM does the mapping for document representation of data. 
 eg. of ODM is Mongoose
 
+
+# Installing Sequelize [ORM]
+
+```
+$ npm install sequelize
+$ npm i sequelize-cli
+```
+
+You'll also have to manually install the driver for your database of choice:
+
+```
+# One of the following:
+$ npm install --save pg pg-hstore # Postgres
+$ npm install --save mysql2
+$ npm install --save mariadb
+$ npm install --save sqlite3
+$ npm install --save tedious # Microsoft SQL Server
+$ npm install --save oracledb # Oracle Database
+```
+
+In order to initialize sequelize, we need to run the command `npx sequelize init` in the directory where we want to initialize the models, and in the directory where we want to write the code.
+
+```
+cd .\src\
+
+
+```
