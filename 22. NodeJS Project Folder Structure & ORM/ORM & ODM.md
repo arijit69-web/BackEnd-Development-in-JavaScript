@@ -65,6 +65,6 @@ The Config.json file gives us configurations for three environments:
 
 - `database` -> Set the Database name that u want to set.
 
-**Include this config.json file in your .gitignore file.**
+**Include this config.json file inside your .gitignore file.**
 
 
