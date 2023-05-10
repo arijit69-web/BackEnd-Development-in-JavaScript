@@ -6,7 +6,7 @@ Step 1: Inside the config/config.json file write the following code:
 {
   "development": {
     "username": "root",
-    "password": "Arijit@2000",
+    "password": "",
     "database": "Flights",
     "host": "127.0.0.1",
     "dialect": "mysql",
