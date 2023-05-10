@@ -68,7 +68,7 @@ An instance of Sequelize uses something called Query Interface to communicate to
 
 - If u make any changes inside the `airplane.js` file which contains the JS level code then u have to also make changes inside the `230508150837-create-airplane.js` file also which contains the Database level code and vice versa. 
 
-## Create actual table/model inside the Database
+### Create actual table/model inside the Database
 
 In order to actually create a table/model inside the DB.
 
