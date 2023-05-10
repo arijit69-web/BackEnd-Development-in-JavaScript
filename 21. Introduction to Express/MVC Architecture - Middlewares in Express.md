@@ -80,7 +80,7 @@ Middleware functions are functions that have access to the request object (req),
 
     - `services` -> contains the buiness logic and interacts with repositories for data from the database. Services will depend on another layer called repositories.
 
-    - `repositories` -> this folder contains all the logic using which we interact the DB by writing queries, all the raw queries or ORM queries will go here.
+    - `repositories` -> this folder contains all the logic using which we interact the DB/ models by writing queries, all the raw queries or ORM queries will go here. Controllers don't directly talk to models.Services have business logic, so they don't directly talk to models. Repository talks to models.
 
     - `schema/models` -> defines the structure and the property of DB tables/ collections. It also has a logic to connect to DB. We can also define our triggers and stored procedures in this folder.
 

@@ -12,7 +12,7 @@ ODM on the other hand is an Object Document Mapper, which maps objects with a Do
 eg. of ODM is Mongoose
 
 
-# Installing Sequelize [ORM]
+# Installing Sequelize [ORM] & Sequelize-CLI
 
 ```
 $ npm install sequelize
