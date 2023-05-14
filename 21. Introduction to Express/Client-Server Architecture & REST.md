@@ -53,7 +53,7 @@ The Top API Architecture Styles of 2023:
 
 # REST (REpresentational State Transfer)
 
-A set of guidelines that drive the architecture of the web. Representational State Transfer (REST) is a software architecture style for building scalable web services. REST services typically communicate via HTTP and are built using XML and JSON. 
+A set of guidelines that drive the architecture of the web. Representational State Transfer (REST) is a software architecture style for building scalable web services. REST services typically communicate via HTTP and are built using XML/JSON. We can build REST services with both XML and JSON. JSON is more popular format with REST. 
 >APIs that follow REST guidelines/recommendation are called REST APIs.
 
 ## Guidelines of REST to prepare good APIs:
