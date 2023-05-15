@@ -61,7 +61,8 @@ async function updateCity(id, data) {
       error.name == "SequelizeValidationError" ||
       error.name == "SequelizeUniqueConstraintError"
     ) {
-      // If u get a SequelizeValidationError, it is something that is not coming correctly from the client side.  We have to send a meaningful full response to the user/client that this validation is not going correctly, so please correct this field. So status code will also be some client related status code.
+      // If u get a SequelizeValidationError, it is something that is not coming correctly from the client side.  We have to send a meaningful response to the user/client that this validation is not going correctly, so please correct this field. So status code will also be some client related status code.
+      // If u get a SequelizeUniqueConstraintError, it is something that is not coming correctly from the client side. The name value should be unique in the table as we have put a `unique: true` constraint in the table column. We are trying to enter a name that already exists in the table. So status code will also be some client related status code.
       let explanation = [];
       error.errors.forEach((err) => {
         explanation.push(err.message);
