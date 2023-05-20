@@ -77,7 +77,7 @@ In order to actually create a table/model inside the DB.
 Step 2: Inside the terminal, inside the `/src` folder write the following command:
 
 ```
-npx sequelize db:migrate
+$ npx sequelize db:migrate
 ```
 
 It migrates or creates all the pending migrations (updates made inside the table) and actually creates a table/model inside the actual Database. **Now it originally creates a table inside the Database.**
@@ -91,7 +91,7 @@ It migrates or creates all the pending migrations (updates made inside the table
 Step 1: Inside the terminal, inside the `/src` folder write the following command:
 
 ```
-npx sequelize db:migrate:undo
+$ npx sequelize db:migrate:undo
 ```
 
 ## Undo all the migrations
@@ -99,7 +99,7 @@ npx sequelize db:migrate:undo
 Step 1: Inside the terminal, inside the `/src` folder write the following command:
 
 ```
-npx sequelize db:migrate:undo:all
+$ npx sequelize db:migrate:undo:all
 ```
 
 > This is how u can create versions of your Database Schema. When u are `Adding a Migration`, `async up()` function present inside the `230508150837-create-airplane.js` file is going to be applied and when you are `Undoing a migration`, `async down()` function present inside the `230508150837-create-airplane.js` file is going to be applied. In `Undo Migration` u are going to lose all the data as it is going to `Drop the Table`.
@@ -213,4 +213,19 @@ Step 2: Inside the terminal, inside the `/src` folder write the following comman
 
 ```
 $ npx sequelize db:seed:undo:all
+```
+</br>
+</br>
+
+## NOTE: If you modify the migration files already created for the existing DB-Table
+
+- Undo the migration
+- Redo the migration
+
+Inside the terminal, inside the `/src` folder write the following command:
+
+```
+$ npx sequelize db:migrate:undo
+
+$ npx sequelize db:migrate
 ```
