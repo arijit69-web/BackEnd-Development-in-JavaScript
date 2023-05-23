@@ -23,7 +23,7 @@ async function createAirplane(data) {
       throw new AppError(explanation, StatusCodes.BAD_REQUEST); // Send client-related status code for SequelizeValidationError
     }
     throw new AppError(
-      "Cannot create a new Airplance Object",
+      "Cannot create a new Airplane Object",
       StatusCodes.INTERNAL_SERVER_ERROR
     ); // Or else send server-related status code
   }
