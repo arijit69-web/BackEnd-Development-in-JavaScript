@@ -26,7 +26,6 @@ function validateUpdateRequest(req, res, next) {
   }
   next(); // If users send the Data properly without any fail then u will call the next middleware (i.e. the controller) using the next() function
 }
-module.export
 module.exports = {
   validateCreateRequest,
   validateUpdateRequest
