@@ -215,4 +215,5 @@ Alice and Bob share common Google-sheet online. Both read the file. Alice update
 
 The content updated by Alice is overwritten by Bob. The data updated by Alice is lost. It is called as Write-Write (WW) conflict.
 
-
+# Transaction in DBMS Example
+- [VIDEO](https://drive.google.com/file/d/1ypGo-hYA6f1iM421rfdp5nl3OnDvC9Yy/view?usp=drive_link)
