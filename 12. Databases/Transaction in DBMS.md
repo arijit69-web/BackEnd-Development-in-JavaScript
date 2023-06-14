@@ -215,5 +215,4 @@ Alice and Bob share common Google-sheet online. Both read the file. Alice update
 
 The content updated by Alice is overwritten by Bob. The data updated by Alice is lost. It is called as Write-Write (WW) conflict.
 
-This is all about different types of read write conflict in DBMS. If you have any doubt or any thought about this article, write a comment below. I will reply you back as soon as possible.
 
