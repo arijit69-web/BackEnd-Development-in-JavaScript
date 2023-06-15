@@ -1,2 +1,23 @@
 # BASIC BOOKING FLIGHTs LOGIC
 - [VIDEO](https://drive.google.com/file/d/1xeyCwaqdSSgzaicSLN__ylYWFEaCRyiz/view?usp=drive_link)
+
+# BOOKING FLIGHTs MECHANISM
+
+## Problems:
+
+### 1. Same Seat Selection
+- The Booking Mechanism depends on payments. 
+- When u are playing with someone's payments u have to be very careful.
+- The same seat has been selected by two users, but neither has started the booking process.
+- As soon as both users started the booking process.
+- The request which reaches the server first with milli/micro/nano seconds difference gets blocked for 10 mins and block key is sent back. [Dependent on network speed]
+- Other requests get block fail response.
+- Successful request has 10 mins to book the ticket using the block key.
+- We need to complete payment, booking confirmation and user notifications like email and sms with in 10 mins.
+- After 10 minutes ticket is released to all if the ticket is not confirmed.
+
+### 2. There are two concurrent bookings for one seat
+
+### 3. During the processing of the payment request/response, the payment fails, etc.
+
+
