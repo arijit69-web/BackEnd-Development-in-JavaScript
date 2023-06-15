@@ -185,6 +185,23 @@ Expected behavior:
 
 The new transaction (says T2) should not read the value if any other another transaction (say T1) already has written the data and has not committed.
 
+</br>
+
+The dirty read problem occurs when one transaction updates an item of the database, and somehow the transaction fails, and before the data gets rollback, the updated database item is accessed by another transaction. There comes the Read-Write Conflict between both transactions.
+
+Example:
+
+Consider two transactions TX and TY in the below diagram performing read/write operations on account A where the available balance in account A is $300:
+
+<img src="./ss-6.PNG"  width="380" height="250">
+
+- At time t1, transaction TX reads the value of account A, i.e., $300.
+- At time t2, transaction TX adds $50 to account A that becomes $350.
+- At time t3, transaction TX writes the updated value in account A, i.e., $350.
+- Then at time t4, transaction TY reads account A that will be read as $350.
+- Then at time t5, transaction TX rollbacks due to server problem, and the value changes back to $300 (as initially).
+- But the value for account A remains $350 for transaction TY as committed, which is the dirty read and therefore known as the Dirty Read Problem.
+
 ### What is Read-Write (RW) conflict?
 
 <img src="./ss-4.png"  width="380" height="250">
@@ -196,9 +213,7 @@ Here if you look at the diagram above, data read by transaction T1 before and af
 Example:
 
 Suppose Alice and Bob want to book the flight for their vacation. Alice open airlines website to check the availability and cost of the ticket. There is only one ticket is available. Alice finds it expensive and looks for other airlines fares if she gets any offers.
-
 Meanwhile, Bob logins to the same airline portal and book the ticket. Now, there is no more flight ticket available.
-
 Alice does not find any good offer on other airlines portal, she comes back to the previous airline portal. And tried to book a flight ticket even it is not available. Its Conflict, Read-Write (WR) conflict.
 
 ### What is Write-Write (WW) conflict?
@@ -211,9 +226,25 @@ Data written by T1 has vanished. So it is data update loss.
 
 Example:
 
-Alice and Bob share common Google-sheet online. Both read the file. Alice updates the document and forgets to save the file. On another end, Bob updates the Google sheet and save the file.
+Alice and Bob share common Google-sheet online. Both read the file. Alice updates the document and forgets to save the file. On another end, Bob updates the Google sheet and save the file. The content updated by Alice is overwritten by Bob. The data updated by Alice is lost. It is called as Write-Write (WW) conflict.
 
-The content updated by Alice is overwritten by Bob. The data updated by Alice is lost. It is called as Write-Write (WW) conflict.
+</br>
 
+The problem occurs when two different database transactions perform the read/write operations on the same database items in an interleaved manner (i.e., concurrent execution) that makes the values of the items incorrect hence making the database inconsistent.
+
+Example:
+
+Consider the below diagram where two transactions TX and TY, are performed on the same account A where the balance of account A is $300.
+
+<img src="./ss-7.PNG"  width="380" height="250">
+
+- At time t1, transaction TX reads the value of account A, i.e., $300 (only read).
+- At time t2, transaction TX deducts $50 from account A that becomes $250 (only deducted and not updated/write).
+- Alternately, at time t3, transaction TY reads the value of account A that will be $300 only because TX didn't update the value yet.
+- At time t4, transaction TY adds $100 to account A that becomes $400 (only added but not updated/write).
+- At time t6, transaction TX writes the value of account A that will be updated as $250 only, as TY didn't update the value yet.
+- Similarly, at time t7, transaction TY writes the values of account A, so it will write as done at time t4 that will be $400. It means the value written by TX is lost, i.e., $250 is lost.
+
+Hence data becomes incorrect, and database sets to inconsistent.
 # Transaction in DBMS Example
 - [VIDEO](https://drive.google.com/file/d/1ypGo-hYA6f1iM421rfdp5nl3OnDvC9Yy/view?usp=drive_link)
