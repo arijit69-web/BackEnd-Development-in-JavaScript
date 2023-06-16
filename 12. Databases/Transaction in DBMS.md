@@ -285,5 +285,60 @@ Redo Log -> The redo log is a disk-based Data Structure used for crash recovery 
 
 - [DOCs](https://en.wikipedia.org/wiki/Isolation_(database_systems))
 
+
+# Database Isolation Levels
+
+- [DOCs](https://medium.com/nerd-for-tech/understanding-database-isolation-levels-c4ebcd55c6b9)
+
+## 4 Database Isolation Levels
+
+### 1. Read Uncommitted
+- There is almost no isolation here.
+- It reads the latest uncommitted value at every step that can be updated from other uncommitted transactions.
+- Dirty reads are possible.
+- Pretty fast.
+
+### 2. Read Committed
+- Here Dirty reads are avoided. Because any uncommitted changes are not visible to any other transaction until we commit.
+- In this level, each select statement will have its own snapshot of data which can be problematic if we execute the same select again because some other transaction might commit and update and we will see new data in the second select.
+
+### 3. Repeatable Read
+- A snapshot of select is taken the first time it runs during a transaction & the same snapshot is used throughout the transaction when the same select is executed.
+- A transaction running at this level does not take into account any changes to data made by other transactions.
+- But this brings Phantom Read problem i.e. new row can exist in b/w transaction which was not before.
+
+### 4. Serializable
+- It completely isolates the effect of 1 transaction from others. It is a repeatable read with more isolation to avoid phantom reads.
+- Typically this isolation mode would lock the whole table, to prevent any other transactions from inserting or reading data from it.
+- 2 transactions may occur almost one after another.
+- Performance can be affected by this.
+- In case of Booking Systems, this mechanism is good.
+- Booking Systems are not a very fast mechanism.
+
+Example: When you do a booking at BookMyShow, sometimes you will see it immediately says, hey, you are booked. Sometimes u will see that it says the booking is pending confirming the status in few minutes. And after sometimes booking has been confirmed, Because your transaction is still going on, it has to still complete itself. so they don't block u at the UI level they throw u back on the final confirmation page with a pending state and later when the states get updated then they can send some server-side events and there are multiple ways/mechanisms to handle it.  U can get the updated data back.
+
+
+# Durability 
+
+The DB should be durable enough to hold all the latest updates even if the system fails or restarts. If a transaction updates a chunk of data in the DB & commits the DB will hold the new data. If Transaction commits but the system fails before data could be written then data should be written back when the system restarts.
+
+# Consistency
+Consistency in InnoDB involves protecting data from crashes & maintaining data integrity & consistency.
+
+InnoDB has 2 main features for maintaining consistency:
+
+- DoubleWrite Buffer : It is a storage area where InnoDB writes pages flushed from buffer pool before writing the pages to their positions in data files. If a system crashes in middle of a page write, InnoDB can find a good copy from DoubleWrite Buffer.
+
+    - Page :  It is a unit that specifies how much data can be transferred b/w disk and memory. A page can contain 1 or more rows. If 1 row doesn't fit in the page, InnoDB sets up additional pointers style DS so that the whole info. of 1 row can go in a page.
+    - Flush : When we write something to the DB it is not written instantly for performance reasons in MySQL. It instead stores that either in memory or in temporary disk storage. InnoDB storage structures that are periodically flushed include Redo logs, Undo Logs, and Buffer Pools. Flushing can happen because a memory area became full and the system needs to free some space, because if there is a commit involved then the transaction has to be finalized.
+- Crash Recovery : . Crash recovery is the process by which the database is moved back to a consistent and usable state. This is done by rolling back incomplete transactions and completing committed transactions that were still in memory when the crash occurred. Redo Logs and Undo Logs are also used for crash recovery. The integrity constraints of a database are also maintained so that the database is consistent before and after the transaction.
+
+
+
+```
+A storage engine is a software module that a database management system uses to create, read, update data from a database. There are two types of storage engines in MySQL: transactional and non-transactional.
+For MySQL 5.5 and later, the default storage engine is InnoDB. 
+```
+
 # Transaction in DBMS [IMP]
 - [VIDEO](../../Videos/Transaction%20in%20DBMS%202%20%5BIMP%5D.mp4)
