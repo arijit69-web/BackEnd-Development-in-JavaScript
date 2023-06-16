@@ -333,8 +333,6 @@ InnoDB has 2 main features for maintaining consistency:
     - Flush : When we write something to the DB it is not written instantly for performance reasons in MySQL. It instead stores that either in memory or in temporary disk storage. InnoDB storage structures that are periodically flushed include Redo logs, Undo Logs, and Buffer Pools. Flushing can happen because a memory area became full and the system needs to free some space, because if there is a commit involved then the transaction has to be finalized.
 - Crash Recovery : . Crash recovery is the process by which the database is moved back to a consistent and usable state. This is done by rolling back incomplete transactions and completing committed transactions that were still in memory when the crash occurred. Redo Logs and Undo Logs are also used for crash recovery. The integrity constraints of a database are also maintained so that the database is consistent before and after the transaction.
 
-
-
 ```
 A storage engine is a software module that a database management system uses to create, read, update data from a database. There are two types of storage engines in MySQL: transactional and non-transactional.
 For MySQL 5.5 and later, the default storage engine is InnoDB. 
@@ -342,3 +340,6 @@ For MySQL 5.5 and later, the default storage engine is InnoDB.
 
 # Transaction in DBMS [IMP]
 - [VIDEO](../../Videos/Transaction%20in%20DBMS%202%20%5BIMP%5D.mp4)
+
+# Transaction in Sequelize
+- [DOCs](https://sequelize.org/docs/v6/other-topics/transactions/)
