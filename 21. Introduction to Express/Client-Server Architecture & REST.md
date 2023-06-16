@@ -137,3 +137,37 @@ URL parameter is basically used to identify a specific resource or resources whe
 ## CRUD APIs
 
 **CRUD** stands for CREATE, READ, UPDATE, and DELETE. These functions are the four pillars of a complete CRUD API. APIs that provide all these functionalities together are called CRUD APIs.
+
+# GET V/S POST
+
+### The GET Method
+GET is used to request data from a specified resource. It can retrieve any visible data to a client, such as HTML documents, images, and videos:
+
+To send a GET request, a client needs to specify the URL of the resource it wants to retrieve. The request is then sent to the server, which processes the request and sends the requested data back to the client.
+
+### The POST Method
+The POST sends data to a server to create or update a resource. For example, it is often used to submit an HTML form to a server:
+
+To send a POST request, a client needs to specify the URL of the resource to which it wants to send data and the data itself. The request is then sent to the server, which processes the request and sends a response back to the client.
+
+The POST method is often used to submit forms or upload files to a server.
+
+### Differences Between GET and POST
+
+**Visibility**
+When using GET, data parameters are included in the URL and visible to everyone. However, when using POST, data is not displayed in the URL but in the HTTP message body.
+
+**Security**
+GET is less secure because the URL contains part of the data sent. On the other hand, POST is safer because the parameters are not stored in web server logs or the browser history.
+
+**Cache**
+GET requests can be cached and remain in the browser history, while POST requests cannot. This means GET requests can be bookmarked, shared, and revisited, while POST requests cannot:
+
+**Server State**
+GET requests are intended to retrieve data from a server and do not modify the server’s state. On the other hand, POST requests are used to send data to the server for processing and may modify the server’s state.
+
+**Amount of Data Transmitted**
+The GET method is limited to a maximum number of characters, while the POST method has no such limitation. This is because the GET method sends data through the resource URL, which is limited in length, while the POST method sends data through the HTTP message body, which has no such limitation.
+
+**Data Type**
+The GET method supports only string data types, while the POST method supports different data types such as string, numeric, binary, and so on.

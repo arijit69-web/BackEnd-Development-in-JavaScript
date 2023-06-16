@@ -248,3 +248,42 @@ Consider the below diagram where two transactions TX and TY, are performed on th
 Hence data becomes incorrect, and database sets to inconsistent.
 # Transaction in DBMS Example
 - [VIDEO](https://drive.google.com/file/d/1ypGo-hYA6f1iM421rfdp5nl3OnDvC9Yy/view?usp=drive_link)
+
+# How DBs ensure atomicity??
+
+DBs ensure atomicity in 2 ways 
+
+- Logging(Write-Ahead Log) -> Your DBMS logs all actions/queries that were executed in the transaction so that later it can undo them. This is pretty easy to understand. Every transaction is first appended to a log as a set of mutations to the state. Eventually, these mutations will make their way into the primary data structure (usually some kind of B-tree). In the event of a crash, mutations can be rolled back by undoing mutations specified in the log.
+The cool thing about write-ahead logs is that writes happen sequentially. If you’re inserting lots of random data, you’ll still be doing fast, sequential writes. Eventually though, this data will be flushed into the primary data structure and you can’t avoid random writes. Still, this is great for short bursts of writes. These logs can be maintained in memory or disk depending on DBMS system to system. MYSQL uses this mechanism
+
+- Shadow Paging -> DBMS makes copies of actions and this copy is initially considered a temporary copy. If the transaction is successful, it starts pointing to the new temporary copy. Shadow paging has a lot in common with persistent data structures. With shadow paging, you never modify existing data. With the WAL approach, existing pages will be modified when the log is flushed. In other words, updates are in-place. With shadow paging, updates are append only. If you’re using a tree, any modification to the nodes will result in a new root, and essentially a new tree. Atomicity in this case isn’t difficult to grasp. If a transaction is committed, the existing root node gets replaced with the new root. Otherwise, the new root is discarded. Eg. Your transactions are going to apply/make some changes in your DBs. You will not make changes directly on your DB rather you will create a copy of some partition of the DB and try to do all of those actions/changes in that copy. If the transaction is successful. You will start pointing to the new temporary copy instead of the old copy and the old copy will be later removed. Otherwise, if the transactions failed then u will not start pointing the temporary copy and the temporary copy will be removed. CouchDB uses this mechanism.
+
+>Logging is the most preferred mechanism.
+
+## SQL Commit and Rollback
+COMMIT and ROLLBACK are performed on transactions. A transaction is the smallest unit of work that is performed against a database. Its a sequence of instructions in a logical order. A transaction can be performed manually by a programmer or it can be triggered using an automated program.
+
+### SQL Commit
+COMMIT is the SQL command that is used for storing changes performed by a transaction. When a COMMIT command is issued it saves all the changes since last COMMIT or ROLLBACK.
+
+### SQL RollBack
+ROLLBACK is the SQL command that is used for reverting changes performed by a transaction. When a ROLLBACK command is issued it reverts all the changes since last COMMIT or ROLLBACK.
+
+## Atomicity for MySQL
+After each commits or rollback, the DB remains in a consistent state.
+In order to handle rollback,
+- Undo Log
+- Redo Log
+
+Undo Log -> This log contains a record of how to undo the last change done by a transaction. If any other transaction needs the original data as a part of a consistent read operation, the unmodified data is retrieved from undo logs. This log stores copy of data that is being modified by any current transaction. So that, at the same time if any other transaction queries for the original data, this log will serve the purpose..!!
+
+Redo Log -> The redo log is a disk-based Data Structure used for crash recovery to correct data written by incomplete transactions. The changes which could make it up to the data files before the crash or for any other reasons are replayed automatically during the restart of the servers after the crash. The transactions which were already executed, but not committed the disk due to some DB crash..! So, the Redo log records every transaction, holds until it gets committed and if needed, it will be used for crash recovery.
+
+>By combining the Undo and Redo logs, MySQL ensures atomicity.
+
+# ISOLATION
+
+- [DOCs](https://en.wikipedia.org/wiki/Isolation_(database_systems))
+
+# Transaction in DBMS [IMP]
+- [VIDEO](../../Videos/Transaction%20in%20DBMS%202%20%5BIMP%5D.mp4)
