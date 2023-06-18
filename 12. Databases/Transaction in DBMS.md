@@ -319,7 +319,6 @@ Example: When you do a booking at BookMyShow, sometimes you will see it immediat
 
 
 # Durability 
-
 The DB should be durable enough to hold all the latest updates even if the system fails or restarts. If a transaction updates a chunk of data in the DB & commits the DB will hold the new data. If Transaction commits but the system fails before data could be written then data should be written back when the system restarts.
 
 # Consistency
@@ -337,6 +336,39 @@ InnoDB has 2 main features for maintaining consistency:
 A storage engine is a software module that a database management system uses to create, read, update data from a database. There are two types of storage engines in MySQL: transactional and non-transactional.
 For MySQL 5.5 and later, the default storage engine is InnoDB. 
 ```
+
+# Race Condition
+
+A race condition occurs when two or more entities can access shared data and they try to change it at the same time. 
+
+>**Locking Mechanism** provided by **MySQL** to avoid Race conditions.
+>The **DataBase Isolation Levels** are internally somewhere dependent on these Locking Mechanism.
+
+- Shared Locks -> It allows multiple transactions to read data at the same time, but restricts their right to modify data. 
+
+- Exclusive Locks -> This prevents transactions from reading or writing the same data at the same time. If one transaction has taken an exclusive lock the other transaction won't be able to read or write anything on the same data at the same point in time until and unless the lock is removed.
+
+- Intent Locks -> This is used to specify that a transaction is planning to read or write a certain section of data. This lock is a means used by a transaction to inform another transaction about its intention to acquire a lock. The purpose of such lock is to ensure data modification to be executed properly by preventing another transaction to acquire a lock on the next in hierarchy object.
+
+- Row-Level Locks -> This allow a transaction to lock only a specific row. Row-Level Locks are efficient because it will not lock the whole table while other locks like exclusive locks and shared locks are going to lock the whole table altogether and can have performance issues.
+
+```
+MySQL -> MVCC DB (MultiVersion Concurrency Control) compatible to allow multiple transactions to Read and Write to the same data without much conflict.
+HOW?
+Every transaction in MYSQL sort of captures the data it is about to modify at the start of the transaction and writes the changes to an entirely different version of the data.
+MySQL is smart because it knows that there can be concurrency-related problems. If let's say two transactions are there and they are trying to update some data or modify some data, then it's not going to actually go and update the data in the same table at the same point in time. But what it will do is, it will write the changes entirely to a different version of data. Maybe it can maintain somewhere it as a copy somewhere on the disk or somewhere else however it manages it.
+This allows transaction to continue working with original data without conflict. MYSQL will handle all transactions and concurrency-related problems very efficiently.
+```
+
+>In Booking Systems,  there can be multiple cases of  Race Conditions.
+
+To handle these kinds of race conditions we can implement 2 different kinds of mechanisms. 
+
+- Pessimistic Concurrency Control ->  The pessimistic locking model prevents simultaneous updates to records. As soon as one user starts to update a record, a lock is placed on it. Other users who attempt to update this record are informed that another user has an update in progress. The other users must wait until the first user has finished committing their changes, thereby releasing the record lock. Only then can another user make changes based on the previous user's changes. An advantage of the pessimistic locking model is that it avoids the issue of conflict resolution by preventing conflicts. Updates are serialized and each subsequent update starts with the committed record changes from the previous user.
+
+- Optimistic Concurrency Control -> The optimistic locking model, also referred to as optimistic concurrency control, is a concurrency control method used in relational databases that does not use record locking. Optimistic locking allows multiple users to attempt to update the same record without informing the users that others are also attempting to update the record. The record changes are validated only when the record is committed. If one user successfully updates the record, the other users attempting to commit their concurrent updates are informed that a conflict exists. An advantage of the optimistic locking model is that it avoids the overhead of locking a record for the duration of the action. If there are no simultaneous updates, then this model provides fast updates.
+
+
 
 # Transaction in DBMS [IMP]
 - [VIDEO](../../Videos/Transaction%20in%20DBMS%202%20%5BIMP%5D.mp4)
