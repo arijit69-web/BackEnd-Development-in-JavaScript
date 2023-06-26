@@ -115,26 +115,18 @@ async function isAdmin(id) {
         StatusCodes.NOT_FOUND
       );
     }
-    const adminrole1 = await roleRepo.getRoleByName(
+    const adminrole = await roleRepo.getRoleByName(
       Enums.USER_ROLES_ENUMS.ADMIN
     );
-    const adminrole2 = await roleRepo.getRoleByName(
-      Enums.USER_ROLES_ENUMS.FLIGHT_COMPANY
-    );
-    if (!adminrole1) {
+
+    if (!adminrole) {
       throw new AppError(
         "For the given role, no users were found",
         StatusCodes.NOT_FOUND
       );
     }
-    if (!adminrole2) {
-      throw new AppError(
-        "For the given role, no users were found",
-        StatusCodes.NOT_FOUND
-      );
-    }
-   
-    return user.hasRole(adminrole1) || user.hasRole(adminrole2) ;// hasRole() is a magic method inside sequelize | LINK -> https://medium.com/@julianne.marik/sequelize-associations-magic-methods-c72008db91c9
+
+    return user.hasRole(adminrole); // hasRole() is a magic method inside sequelize | LINK -> https://medium.com/@julianne.marik/sequelize-associations-magic-methods-c72008db91c9
   } catch (error) {
     if (error instanceof AppError) throw error;
     throw new AppError(

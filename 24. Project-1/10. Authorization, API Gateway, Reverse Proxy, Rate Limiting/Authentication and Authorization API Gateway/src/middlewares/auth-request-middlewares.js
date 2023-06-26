@@ -41,18 +41,15 @@ async function checkAuth(req, res, next) {
 }
 
 async function isAdmin(req, res, next) {
-  if (req.method == "GET") {
-    next();
-  } else {
-    const response = await UserService.isAdmin(req.user); // When we are doing isAutenticated() then inside isAutenticated() if the user is Autenticated then inside the req object I was setting the `user` property which contains the id of the user `req.user = response;`. So we don't want to separately pass the user id, we will just pass req.user as a parameter
-    if (!response) {
-      return res
-        .status(StatusCodes.UNAUTHORIZED)
-        .json({ message: "The user is not authorized to perform this action" });
-    }
-    next();
+  const response = await UserService.isAdmin(req.user); // When we are doing isAutenticated() then inside isAutenticated() if the user is Autenticated then inside the req object I was setting the `user` property which contains the id of the user `req.user = response;`. So we don't want to separately pass the user id, we will just pass req.user as a parameter
+  if (!response) {
+    return res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ message: "The user is not authorized to perform this action" });
   }
+  next();
 }
+
 module.exports = {
   validateAuthRequest,
   checkAuth,
