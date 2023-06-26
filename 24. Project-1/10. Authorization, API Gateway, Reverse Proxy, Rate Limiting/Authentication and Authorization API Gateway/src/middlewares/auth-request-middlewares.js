@@ -29,7 +29,8 @@ async function checkAuth(req, res, next) {
       // This middleware will check if the user is authenticated or not using JWT Token
       req.headers["x-access-token"] // x-access-token -> JWT Token
     );
-    if (response) {// response is the user id
+    if (response) {
+      // response is the user id
       // if no error actually happened
       req.user = response; // setting the user id inside the req object's user property | Downstream/internal APIs use this to identify that the incoming request is the authenticated one and who the actual user is.
       next();
@@ -40,16 +41,20 @@ async function checkAuth(req, res, next) {
 }
 
 async function isAdmin(req, res, next) {
-  const response = await UserService.isAdmin(req.user); // When we are doing isAutenticated() then inside isAutenticated() if the user is Autenticated then inside the req object I was setting the `user` property which contains the id of the user `req.user = response;`. So we don't want to separately pass the user id, we will just pass req.user as a parameter
-  if (!response) {
-    return res
-      .status(StatusCodes.UNAUTHORIZED)
-      .json({ message: "The user is not authorized to perform this action" });
+  if (req.method == "GET") {
+    next();
+  } else {
+    const response = await UserService.isAdmin(req.user); // When we are doing isAutenticated() then inside isAutenticated() if the user is Autenticated then inside the req object I was setting the `user` property which contains the id of the user `req.user = response;`. So we don't want to separately pass the user id, we will just pass req.user as a parameter
+    if (!response) {
+      return res
+        .status(StatusCodes.UNAUTHORIZED)
+        .json({ message: "The user is not authorized to perform this action" });
+    }
+    next();
   }
-  next();
 }
 module.exports = {
   validateAuthRequest,
   checkAuth,
-  isAdmin
+  isAdmin,
 };
