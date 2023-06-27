@@ -17,8 +17,8 @@ const limiter = rateLimit({
   windowMs: 2 * 60 * 1000, // 2 minutes - Window
   max: 30, // Limit each IP to 30 requests per `window` (here, per 2 minutes)
 });
-// Setting up Reverse Proxy
 
+// Setting up Reverse Proxy
 app.use(
   "/flightsService", // if the user gives us a request to /flightsService
   [AuthRequestMiddlewares.checkAuth, AuthRequestMiddlewares.isAdmin],
@@ -37,6 +37,7 @@ app.use(
   })
 );
 
+//--------------------------------------------------//
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(limiter);
