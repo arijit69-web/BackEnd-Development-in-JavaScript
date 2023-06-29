@@ -6,6 +6,9 @@
 ## Problems:
 
 ### 1. Same Seat Selection
+
+
+### 2. There are two concurrent bookings for one seat
 - The Booking Mechanism depends on payments. 
 - When u are playing with someone's payments u have to be very careful.
 - The same seat has been selected by two users, but neither has started the booking process.
@@ -15,8 +18,6 @@
 - Successful request has 10 mins to book the ticket using the block key.
 - We need to complete payment, booking confirmation and user notifications like email and sms with in 10 mins.
 - After 10 minutes ticket is released to all if the ticket is not confirmed.
-
-### 2. There are two concurrent bookings for one seat
 
 ### 3. During the processing of the payment request/response, the payment fails, etc.
 
