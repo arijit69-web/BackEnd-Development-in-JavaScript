@@ -84,6 +84,38 @@ It migrates or creates all the pending migrations (updates made inside the table
 
 > `airplane.js` file contains the JS level code and `230508150837-create-airplane.js` file contains the Database level code.
 
+# Create Migration using Sequelize
+
+Step 1: Inside the terminal, inside the `/src` folder write the following command:
+
+```
+$ npx sequelize migration:generate --name <file-name>
+```
+
+Eg.
+
+```
+$ npx sequelize migration:generate --name update-city-airport-association
+```
+
+```
+1 file is created:
+- 20230520050006-update-city-airport-association -> for DB level code
+```
+
+### Create actual changes to the table/model inside the Database
+
+In order to actually make changes to the table/model inside the DB.
+
+Step 2: Inside the terminal, inside the `/src` folder write the following command:
+
+```
+$ npx sequelize db:migrate
+```
+
+It migrates or creates all the pending migrations (updates made inside the table) and actually make changes to the table/model inside the actual Database. **Now it originally make changes to the table inside the Database.**
+
+
 # Undo the migration
 
 ## Undo the last migration
