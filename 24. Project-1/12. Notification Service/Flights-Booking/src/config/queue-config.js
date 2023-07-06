@@ -1,5 +1,6 @@
 /*
 RabbitMQ is a messaging broker - an intermediary for messaging. It gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.
+Email/Notification Service is down -> We are in maintenance but people are still booking. Despite our email service being down once it is up we have to send all those pending queued mails. 
 */
 const amqplib = require("amqplib"); // Package -> Inorder ot connect NodeJS with RabbitMQ
 const { StatusCodes } = require("http-status-codes");
