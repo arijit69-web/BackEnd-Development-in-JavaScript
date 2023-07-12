@@ -49,4 +49,21 @@ You can do all DB-related operations without SQL queries.
 The NoSQL database stores data without creating tables. 
 In NoSQL DBs, data can be stored in Graph-based DS, Key-Value pair structures, and Document-based structures. No interaction between tables is required over here.
 
-MongoDB is a NoSQL document-based structure.
+## MongoDB
+
+- MongoDB is a NoSQL document-based DB.
+- MongoDB stores one instance or one record as a document and a group of documents belong to a collection/table. A collection has many documents.
+- MongoDB is cross-platform.
+- MongoDB is open source.
+- When we download MongoDB, it executes a server behind the scene @ PORT 27017. By interacting with the server, we can give some instructions and expect some output.
+- In MongoDB, a collection is a group of documents, and each document is a JSON-like structure called a BSON document. BSON is a binary representation of JSON documents, which allows for efficient storage and retrieval of data.
+- MongoDB supports dynamic/flexible schemas for a collection. The dynamic schema in MongoDB means that documents within a collection can have different structures. Each document is self-contained and can have its own set of fields and field types. This flexibility allows you to store data that may have varying attributes or evolve over time without the need to predefine a strict schema for the entire collection. 
+
+    Here's an example to illustrate this flexibility:
+
+    Let's say you have a collection called "Products" where you store information about various products. Initially, you might have documents with fields like "name," "price," and "category." However, as your application evolves, you may introduce new products with additional attributes like "manufacturer," "description," or even nested objects like "reviews." In MongoDB, you can simply insert these new documents with their expanded structure without having to modify the existing documents or the collection schema. This flexibility allows for easy adaptation to changing business requirements and minimizes the need for costly database migrations.
+- MongoDB is a distributed architecture.
+- MongoDB is a highly scalable DB.
+- MongoDB has high performance.
+
+

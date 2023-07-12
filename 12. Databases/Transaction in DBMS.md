@@ -29,7 +29,8 @@ Terminated State: If the transaction gets aborted after roll-back or the transac
 
 <img src="./ss-1.PNG"  width="450" height="250">
 
-Properties of Transaction in DBMS
+## Properties of Transaction in DBMS
+
 There are four major properties that are vital for a transaction to be successful. These are used to maintain state consistency in the database, both before and after the transaction. These are called ACID properties.
 - A - Atomicity
 - C - Consistency
