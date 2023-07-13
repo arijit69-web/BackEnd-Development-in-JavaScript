@@ -51,6 +51,7 @@ In NoSQL DBs, data can be stored in Graph-based DS, Key-Value pair structures, a
 
 ## MongoDB
 
+- case sensetive query
 - MongoDB is a NoSQL document-based DB.
 - MongoDB stores one instance or one record as a document and a group of documents belong to a collection/table. A collection has many documents.
 - MongoDB is cross-platform.
@@ -66,4 +67,7 @@ In NoSQL DBs, data can be stored in Graph-based DS, Key-Value pair structures, a
 - MongoDB is a highly scalable DB.
 - MongoDB has high performance.
 
+## JSON v/s BSON
+
+- [LINK](https://www.mongodb.com/json-and-bson)
 
