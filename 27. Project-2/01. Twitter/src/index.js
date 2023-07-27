@@ -10,5 +10,3 @@ app.listen(ServerConfig.PORT, async () => {
   await DatabaseConfig.connect();
   console.log(`MongoDB Connected!`);
 });
-
-//1:12:00
