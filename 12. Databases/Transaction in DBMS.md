@@ -248,7 +248,7 @@ Consider the below diagram where two transactions TX and TY, are performed on th
 
 Hence data becomes incorrect, and database sets to inconsistent.
 # Transaction in DBMS Example
-- [VIDEO](https://drive.google.com/file/d/1ypGo-hYA6f1iM421rfdp5nl3OnDvC9Yy/view?usp=drive_link)
+- [VIDEO](../../Videos/Transaction%20in%20DBMS%20Example.mp4)
 
 # How DBs ensure atomicity??
 
