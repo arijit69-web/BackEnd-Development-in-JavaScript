@@ -64,15 +64,6 @@ Yes
 ### Why and How :
 Now comes the interesting part, WHY and HOW? Let me first explain WHY and then HOW ingeniously we do that as follows.
 
-### Why :
-- Today the two most widely used version of IP is IPv4 and IPv6.
-- IPv4 is 32 bit and IPv6 is 128 bit.
-- If we talk about IPv4 it has only 32 bits means 2^32 addresses.
-- Possible (max) which is roughly equal to 4 billion(10^9) addresses.
-- But to have more than billions of devices in the world is possible
-- As now we have lots of IoT devices, smartphones, even smart fridges which are connected to the internet.
-- So we have to find out some solution that how can we reuse the already used IP address. otherwise we will run out of IP.
-
 ## Example :
 Here we have two routers Jio and Airtel both are connecting private networks and public networks. Remember we do not talk directly to Google or Amazon server or any public device directly, we talk via our ISP . we talk to ISP router and ISP router talk to the Internet. All ISP or public routers have public IP addresses that they purchase and all have different public IP addresses, they can’t be the same, as in fig. Airtel public IP is 43.5.6.1 and Jio public IP is 53.9.7.1. Now under each public IP address, any private IP address range can be used.  That’s why host A and host B in fig. can have the same private IP address. so within one network for ex-Airtel, all private IPs must be different but for hosts, on two different networks ex-Airtel and Jio hosts may have the same private IP address this way we reuse the private IPs.
 
