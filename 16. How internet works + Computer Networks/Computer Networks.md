@@ -45,30 +45,3 @@ To send an invitation, you write down the friend's unique number on the invitati
 In computer networks, classless addressing works in a similar way. Instead of using fixed predefined groups like classes A, B, or C, each device on the network is assigned a unique number called an IP address. These addresses are not restricted to any specific range or class and can be chosen freely.
 
 So, in simple terms, classless addressing is like giving each friend at your party a unique number, regardless of where they live, allowing you to communicate with them without being restricted by predefined groups or rules. Similarly, in computer networks, classless addressing gives each device a unique address, providing more flexibility and efficient use of available addresses.
-
-
-# Can Two IP Addresses Be Same?
-
-A simple definition of Computer Network is an interconnection of two or more computers(includes personal computers, mobiles, laptops, etc, network devices like a router, switch, bridge, etc)  for the purpose of transferring data. Now one obvious question arises how does one computer in the network identify another? Here, is the answer. By **MAC address** and **IP address**.
-
-```
-Note:
-It is a hardware address given to each NIC(Network Interface Card). 
-
-Can two devices have the same MAC address?
-No.
-Can two devices have the same IP address?  
-Yes
-```
-
-### Why and How :
-Now comes the interesting part, WHY and HOW? Let me first explain WHY and then HOW ingeniously we do that as follows.
-
-## Example :
-Here we have two routers Jio and Airtel both are connecting private networks and public networks. Remember we do not talk directly to Google or Amazon server or any public device directly, we talk via our ISP . we talk to ISP router and ISP router talk to the Internet. All ISP or public routers have public IP addresses that they purchase and all have different public IP addresses, they can’t be the same, as in fig. Airtel public IP is 43.5.6.1 and Jio public IP is 53.9.7.1. Now under each public IP address, any private IP address range can be used.  That’s why host A and host B in fig. can have the same private IP address. so within one network for ex-Airtel, all private IPs must be different but for hosts, on two different networks ex-Airtel and Jio hosts may have the same private IP address this way we reuse the private IPs.
-
-<img src="./Screenshots/CN.png"  width="520" height="350">
-
-## Conclusion :
-All public IPs assigned to Routers of ISPs or Routers connecting to Internet are unique. but private IPs of two hosts can be the same if both are connected to different public networks. So the combination of public and private IP identifies your device uniquely. One interesting activity you can do, take two or more phones to connect all the phones with the hotspot of anyone’s phone. now on all the phones type on Google “what is my IP address” it will give you the public IP to which your phone is connected, (not the private IP), you will see all of your phones have the same public IP (because all of you are connected to the same public router) and to see your private IP  go to setting and then Wi-Fi and then Wi-Fi setting. You will see your private IP address ( for your mobile model please search on google how to find private IP). One more thing you will note here is that all of your private IPs will differ in a uniform manner. Because all of you have the same public network your private IP can’t be the same. 
-
