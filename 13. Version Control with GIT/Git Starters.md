@@ -38,8 +38,16 @@ changes and creates a version out of it.
 8. `git restore --staged <file>` -> Unstages a previously staged file, removing it from the staging area. *Working directory:* Leaves the modified file untouched in your working directory. *Staging area:* Removes the file from the list of changes to be committed. This only works if changes are in your staging area.
 
 **Difference between git rm and git restore**
-Ans: If you want to move the **_whole file_** back to the untracked state, then we do git rm, otherwise if we
-just want the changes to be moved in working area or staging area then we git restore.
+Ans: `git rm`:
+*Action*: Permanently removes a file from both the working directory and the staging area (index).
+*Working directory*: Deletes the file completely.
+*Staging area*: Removes the file from the list of changes to be committed.
+
+`git restore`:u
+
+*Action*: Recovers a file to its last committed state, discarding any uncommitted changes.
+*Working directory*: Overwrites the modified file with the last committed content.
+*Staging area*: Not affected by default.
 
 9. `git diff commit-1-HashID commit-2-HashID` -> Gives the difference of all file changes between two commits.
 
