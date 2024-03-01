@@ -31,12 +31,11 @@ changes and creates a version out of it.
 6. `git log` | `git --no-pager log` -> List downs all the commits of the repository. Every commit is actually a version, so every commit has a unique hash. This unique Hash is actually very important to know How Git internally handles everything? If you want to exit out of git log prompt
    press `q`.
 
-7. `git restore <file>` -> It removes all files changes from the staging area to be committed. This can
+7. `git restore <file>` -> Discards uncommitted local changes in a file, restoring it to its last committed state. *Working directory:* Overwrites the modified file with the last committed content. This can
    be useful, if we write some dirty piece of code and now no more want it. Instead of deleting every change
    line by line manually, we can restore it or you can say restore last clean version of the file.
 
-8. `git restore --staged <file>` -> It changes the file area from staging area to the working area.
-   This only works if changes are in your staging area.
+8. `git restore --staged <file>` -> Unstages a previously staged file, removing it from the staging area. *Working directory:* Leaves the modified file untouched in your working directory. *Staging area:* Removes the file from the list of changes to be committed. This only works if changes are in your staging area.
 
 **Difference between git rm and git restore**
 Ans: If you want to move the **_whole file_** back to the untracked state, then we do git rm, otherwise if we
