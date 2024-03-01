@@ -1,6 +1,6 @@
 # How Git works internally?
 
-- Whenever you actually make changes to your repository,inside the .git folder there is an objects folder, inside that objects folder, we actually stores a directory, inside which the directory name is the first 2 charcaters of the corresponding hash and inside that directory we have this file which is having the remaining 38 hash characters as the key.
+- Whenever you actually make changes to your repository, inside the .git folder there is an objects folder, inside that objects folder, we actually stores a directory, inside which the directory name is the first 2 charcaters of the corresponding hash and inside that directory we have this file which is having the remaining 38 hash characters as the key.
 Key : Directory Name(0d) + File Name(ec2239efc....)
 
 Example 1:
