@@ -41,10 +41,7 @@ changes and creates a version out of it.
 Ans: `git rm`:
 *Action*: Permanently removes a file from both the working directory and the staging area (index).
 *Working directory*: Deletes the file completely.
-*Staging area*: Removes the file from the list of changes to be committed.
-
-`git restore`:u
-
+*Staging area*: Removes the file from the list of changes to be committed. `git restore`:
 *Action*: Recovers a file to its last committed state, discarding any uncommitted changes.
 *Working directory*: Overwrites the modified file with the last committed content.
 *Staging area*: Not affected by default.
