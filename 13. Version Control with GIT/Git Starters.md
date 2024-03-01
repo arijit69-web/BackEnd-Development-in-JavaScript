@@ -28,7 +28,7 @@
 **Commit** is a particular version of the project. It captures a snapshot of the project's staged
 changes and creates a version out of it.
 
-6. `git log` | `git --no-pager log` -> List downs all the commits of the repository. Every commit is actually a version,so every commit has a unique hash. This unique Hash is actually very important to know How Git internally handles everything? If you want to exit out of git log prompt
+6. `git log` | `git --no-pager log` -> List downs all the commits of the repository. Every commit is actually a version, so every commit has a unique hash. This unique Hash is actually very important to know How Git internally handles everything? If you want to exit out of git log prompt
    press `q`.
 
 7. `git restore <file>` -> It removes all files changes from the staging area to be committed. This can
